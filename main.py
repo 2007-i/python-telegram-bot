@@ -1,3 +1,6 @@
+import logging
+import os
+
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
 import asyncio
@@ -105,7 +108,9 @@ async def schedule_tasks(application):
 
 def main():
     try:
-        application = Application.builder().token("TOKEN").build()
+        application = Application.builder().token(
+        os.environ.get("TOKEN")
+    ).build()
 
         # Обработчики команд
         application.add_handler(CommandHandler("start", start))
