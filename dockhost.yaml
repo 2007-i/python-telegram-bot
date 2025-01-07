@@ -1,11 +1,11 @@
 version: 1
-project: my-project
+project: project-telegram
 
 repositories:
 
     echobot:
 
-        url: https://github.com/dockhost/example-python-telegram-bot.git
+        url: https://github.com/2007-i/python-telegram-bot.git
         branch: main
 
         # Set CPU and Memory for first container startup
