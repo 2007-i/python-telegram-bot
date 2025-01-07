@@ -72,7 +72,7 @@ async def schedule_tasks(application):
 
 def main():
     try:
-        application = Application.builder().token("7405527391:AAGNZa_nq77JyqiYPUadarktGmkrWCwLUlM").build()
+        application = Application.builder().token("TOKEN").build()
 
         # Обработчики команд
         application.add_handler(CommandHandler("start", start))
