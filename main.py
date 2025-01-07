@@ -74,7 +74,7 @@ async def schedule_tasks(application):
         await asyncio.sleep(60)  # Проверка каждые 60 секунд
 
 def main():
-    try:
+    
         application = Application.builder().token(
         os.environ.get("TOKEN")
     ).build()
